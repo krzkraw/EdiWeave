@@ -175,7 +175,7 @@ namespace EdiWeave.Framework.Readers
             }
             finally
             {
-                SegmentIndex = SegmentIndex + CurrentSegments.Count;
+                SegmentIndex += CurrentSegments.Count;
                 CurrentSegments.Clear();
             }
 

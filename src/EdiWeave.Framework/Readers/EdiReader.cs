@@ -129,13 +129,11 @@ namespace EdiWeave.Framework.Readers
             var line = "";
             while (!StreamReader.EndOfStream || InternalBuffer.Any())
             {
-                line = line + Read(1);
+                line += Read(1);
                 if (line.Length > 2)
                 {
                     var last3 = line.Substring(line.Length - 3);
-                    Separators separators;
-                    string probed;
-                    if (TryReadHeader(last3, out probed, out separators))
+                    if (TryReadHeader(last3, out var probed, out var separators))
                     {
                         Separators = separators;
                         Trims = Trims.Except(new[] {Separators.Segment}).ToArray();
