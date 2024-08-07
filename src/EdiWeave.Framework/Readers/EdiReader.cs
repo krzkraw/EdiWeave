@@ -24,7 +24,7 @@ namespace EdiWeave.Framework.Readers
     /// <summary>
     /// Reads EDI documents into .NET objects.
     /// </summary>
-    public abstract class EdiReader : BaseReader
+    public abstract class EdiReader : BaseReader, IEdiReader
     {
         internal readonly Func<MessageContext, Assembly> RulesAssembly;
         

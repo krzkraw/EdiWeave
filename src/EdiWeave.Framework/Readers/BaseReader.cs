@@ -27,7 +27,7 @@ namespace EdiWeave.Framework.Readers
     /// <summary>
     /// The base reader.
     /// </summary>
-    public abstract class BaseReader : IDisposable
+    public abstract class BaseReader : IDisposable, IEdiReader
     {
         protected readonly Queue<char> InternalBuffer;
         protected readonly StreamReader StreamReader;

@@ -24,7 +24,7 @@ namespace EdiWeave.Framework.Readers
     /// <summary>
     /// Reads VDA documents into .NET objects.
     /// </summary>
-    public class VdaReader : BaseReader
+    public class VdaReader : BaseReader, IEdiReader
     {
         internal readonly Func<string, MessageContext> MessageContext;
         private readonly string _postFix;
